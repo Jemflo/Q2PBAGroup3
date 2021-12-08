@@ -16,8 +16,8 @@ body, html {
 
 div background {
   background-position: center;
-  background-size: contain;
-  background-image:url(img1.jpg);
+  background-size: cover;
+  background-image:url(/Desktop/Group 3 Q2 Coding/img1.jpg);
   min-height: 75%;
 }
 
@@ -28,15 +28,22 @@ div background {
 }
  .header-img {
   width: 100%;
-  height: 500px;
+  height: 600px;
   background: url('img1.jpg');
   background-size: contain;
    background-attachment: fixed;
   background-position: center;
   padding-top:5px;
-   background-repeat: no-repeat;
+  background-repeat: no-repeat;
 
-
+  }
+  .box {
+  width: 100%;
+  height: auto;
+  @media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
   }
 </style>
 <body>
@@ -61,8 +68,9 @@ div background {
 
 <!-- Header with image -->
 <header class="bgimg w3-display-container w3-grayscale-min" id="home">
+ <div class="box">
  <div class="header-img"></div>
-  
+  </div>
 </header>
 
 <!-- Add a background color and large text to the whole page -->
@@ -179,6 +187,6 @@ function openMenu(evt, menuName) {
 }
 document.getElementById("myLink").click();
 </script>
- 
+
 </body>
 </html>
